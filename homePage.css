@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Fira Code', 'Times New Roman', Times, serif;
+}
+
+:root{
+    --text-color: #fff;
+    --bg-color: #000;
+    --main-color: #4378FF;
+
+    --h1-font: 12rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+}
+
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+    background-image: url(../logos/background.png);
+    overflow-x: hidden;
+}
+
+/* HEADER AND NAVBAR */
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: transparent;
+    padding: 10px 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .50s ease;
+    background-color: rgb(255 255 255 / 5%);
+    backdrop-filter: blur(3px);
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin: 15px 22px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.h-right{
+    display: flex;
+    align-items: center;
+}
+
+.h-right a:first-child{
+    color: var(--text-color);
+    font-size: var(--p-font);
+    margin-right: 20px;
+}
+
+.h-right a{
+    vertical-align: middle;
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 18px;
+    margin-left: 5px;
+    transition: all .50s ease;
+}
+
+.h-right a:hover{
+    color: var(--main-color);
+    transform: translateY(-3px);
+}
+
+#menu-icon{
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* HOME SECTION */
+
+Section{
+    z-index: 1000;
+    padding: 70px 10% 0px;
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.home-text p{
+    font-family: 'Fira Code';
+    font-size: 12px;
+    font-weight: 500px;
+    line-height: 20px;
+    color: #ffffffab;
+    margin-bottom: 35px;
+    padding: 0px 300px 0px 0px;
+}
+
+.btn{
+    font-family: 'Poppins';
+    color: white;
+    display: inline-block;
+    border-color: white; 
+    border-radius: 1000px;
+    border: 2px solid;
+    padding: 13px 40px;
+    background-color: rgb(255 255 255 / 5%);
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn:hover{
+    font-family: 'Poppins';
+    background-color: white;
+    color: #4378FF;
+    font-weight: 700;
+    transform: translateY(-3px);
+}
+
+/* ABOUT SECTION */
+
+.h1{
+    font-size: var(--h1-font);
+}
+
+.container{
+    z-index: 1000;
+    font-family: 'Poppins';
+    color: white;
+    display: inline-block;
+    background-color: rgb(255 255 255 / 15%);
+    backdrop-filter: blur(3px);
+    padding: 30px 35px;
+    text-align: justify;
+    border-radius: 30px;
+}
+
+.info{
+    padding: 30px;
+}
+
+.upper{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.lower{
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.superscripts{
+    font-size: 15px;
+}
+
+.info-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+
+.date{
+    display: flex;
+    padding: 10px 40px;
+    color: #030303;
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.upper-info{
+    padding: 10px 17%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.lower-info{
+    padding: 40px 17%; 
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* ANIMATING OBJECTS SECTION */
+
+.rotating-logo{
+    display: flex;
+}
+
+.thick{
+    z-index: 1;
+    margin-top: -1700px;
+    margin-left: 400px;
+    animation: rotate 19s linear infinite;
+}
+
+.thin{
+    z-index: 2;
+    margin-top: -1695px;
+    margin-left: -1500px;
+    animation: reverse-rotate 10s linear infinite;
+}
+
+.mid{
+    z-index: 3;
+    margin-top: -1695px;
+    margin-left: -1500px;
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverse-rotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
